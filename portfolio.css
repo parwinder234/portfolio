@@ -8,7 +8,7 @@ body{
     
 }
 html,body{
-    oveflow-x:hidden !important;
+    overflow-x:hidden !important;
 width:100%;
 max-width:100%;}
 
@@ -41,7 +41,8 @@ p{
     
 }
 .hero-content{
-    max-width:450px;}
+    max-width:55%px;
+}
 #sub1 a{
 text-decoration: none;
 color: white;

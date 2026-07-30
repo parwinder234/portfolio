@@ -102,7 +102,7 @@ h2{
    box-shadow: 0 0 30px #00bfff;
 
 }
-    @media(max:width:768px){
+    @media(max-width:768px){
         #sub1{
             flex-direction:colum;
             height:auto;

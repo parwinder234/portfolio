@@ -447,10 +447,10 @@ h2{
 
 #form{
     height:500px;
-    width: 500px;
+    width:450px;
     border: 2px solid #082954;
-    padding:20px;
-    margin-left:300px;
+    padding:10px;
+    margin-left:400px;
     margin-top:-550px;
     text-align: center;
 }

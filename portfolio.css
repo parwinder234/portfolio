@@ -32,11 +32,16 @@ p{
 }
 #color{
     background-color: #0b1f3a;
-    height: 600px;
+   min-height: 600px;
     padding: 30px;
+    justify-content:space-between;
+    align-items;center;
+    box-sizing:border-box;
    position:relative;
     
 }
+.hero-content{
+    max-width:600px;}
 #sub1 a{
 text-decoration: none;
 color: white;
@@ -88,14 +93,13 @@ h2{
 #m1{
     height:350px;
     width:330px;
-    margin-left:750px;
+    margin:0;
     border-radius:170px;
     cursor: pointer;
-    margin-top:-300px;
+    
     transition:  0.6s ;
     box-shadow: 0 0 2px  #3aafa9;
-    position:absolute;
-    right:5%;
+
     
   
 }

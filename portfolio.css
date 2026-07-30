@@ -97,6 +97,53 @@ h2{
    box-shadow: 0 0 30px #00bfff;
 
 }
+    @media(max:width:768px){
+        #sub1{
+            flex-direction:colum;
+            height:auto;
+            gap:15px;
+            padding:15px;
+        }
+        h1{
+            margin-left:0;
+            font-size:35px;
+            text-align:center;
+        }
+        h2{
+            marginleft:0;
+            text-align:center;
+        }
+        #p1{
+            margin-left:0;
+            text-align:center;
+            padding:0 15px;
+        }
+        #m1{
+            position:static;
+            width:220px;
+            height:auto;
+            display:block;
+            margin:20px auto;
+        }
+        #button{
+            desplay:flex;
+            flex-direction:column;
+            gap:10px;
+            align-items:center;
+        }
+    .icon{
+        margin-left:0;
+        justify-content:center;
+        gap:30px;
+    }
+        #m1{
+            width:220px;
+            height:220px;
+            margin:20px auto;
+            display:block;
+            border-radius:50%;
+        }
+         }
 #button{
 display:flex;
 gap: 20px;

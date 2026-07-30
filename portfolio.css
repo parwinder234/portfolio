@@ -110,42 +110,39 @@ h2{
     body{
         overflow-x:hidden;
     }
-        #sub1{
-            gap:20px;
-        justify-content:center;
-        flex-wrap:wrap;
-        }
-        h1{
-            margin-left:0;
-            font-size:35px;
-            text-align:center;
-        }
-        h2{
-            marginleft:0;
-            text-align:center;
-        }
-        #p1{
-            margin-left:0;
-            text-align:center;
-            padding:0 15px;
-        }
-        #button{
-            margin-left:0 !important;
-        justify-content:center;
-        flex-wrap:wrap;
-        }
-    .icon{
-        margin-left:0;
-        justify-content:center;
-        gap:30px;
+       
+       #sub1{
+        height:auto;
+        padding:20px;
+        flex-direction:column;
+        gap:20px;
     }
-        #m1{
-           position:static !important;
+
+    h1{
+        margin-left:0;
+        font-size:40px;
+        text-align:center;
+    }
+
+    h2{
+        margin-left:0;
+        text-align:center;
+    }
+
+    #p1{
+        margin-left:0;
+        text-align:center;
+    }
+
+    #m1{
+        position:static;
         width:220px;
         height:220px;
-        margin:20px auto !important;
-        border-radius:50%;
-        object-fit:cover;
+        margin:20px auto;
+        display:block;
+
+  
+   
         }
          }
 #button{

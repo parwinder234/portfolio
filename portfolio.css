@@ -214,12 +214,16 @@ margin-top: 30px;
    
    .icon{
     display: flex;
-    gap:90px;
-    margin-left:130px;
+    gap:25px;
+       margin-top:35px;
+    margin-left:0;
+       align-item:center;
     
     }
     .icon i{
      font-size: 32px;
+         color: #3aafa9;
+        
     }
 
 

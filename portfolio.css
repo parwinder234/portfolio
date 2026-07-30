@@ -140,6 +140,7 @@ h2{
             margin:20px auto;
             display:block;
             border-radius:50%;
+            position:static;
         }
          }
 #button{

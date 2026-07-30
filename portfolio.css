@@ -16,10 +16,12 @@ p{
 #sub1{
     display: flex;
     align-items: center;
-    justify-content:space-around;
-    max-width:100%;
+    justify-content:space-between;
+    padding:0 40px;
    height:100px;
    width: 100%;
+    max-width:100%;
+    box-sizing:border-box;
    border: 2px solid  #082954;
     background-color: #0b1f3a;
 }
@@ -36,7 +38,7 @@ color: white;
 cursor: pointer;
     
 display: inline-block;
-padding-bottom: 5px;
+
 position: relative;
 }
 #sub1 a::after{

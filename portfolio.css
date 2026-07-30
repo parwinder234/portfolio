@@ -135,14 +135,13 @@ h2{
         gap:30px;
     }
         #m1{
-            width:220px;
-            height:220px;
-            margin:20px auto;
-            display:block;
-            border-radius:50%;
             position:static;
-            right:auto;
-            top:auto;
+        width:220px;
+        height:220px;
+        display:block;
+        margin:20px auto;
+        border-radius:50%;
+        object-fit:cover;
         }
          }
 #button{

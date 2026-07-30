@@ -103,6 +103,13 @@ h2{
 
 }
     @media(max-width:768px){
+        *{
+        box-sizing:border-box;
+    }
+
+    body{
+        overflow-x:hidden;
+    }
         #sub1{
             gap:20px;
         justify-content:center;
@@ -123,10 +130,9 @@ h2{
             padding:0 15px;
         }
         #button{
-            desplay:flex;
-            flex-direction:column;
-            gap:10px;
-            align-items:center;
+            margin-left:0 !important;
+        justify-content:center;
+        flex-wrap:wrap;
         }
     .icon{
         margin-left:0;
@@ -134,11 +140,10 @@ h2{
         gap:30px;
     }
         #m1{
-            position:static;
+           position:static !important;
         width:220px;
         height:220px;
-        display:block;
-        margin:20px auto;
+        margin:20px auto !important;
         border-radius:50%;
         object-fit:cover;
         }

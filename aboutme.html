@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Georgia, serif;
+        }
+
+        body {
+            background-color: #071527;
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        
+        header {
+            width: 100%;
+            padding: 25px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            color: #2bbba6;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 45px;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover {
+            color: #2bbba6;
+        }
+
+    
+        .about-container {
+            padding: 40px 8%;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 50px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        
+        .left-box {
+            border: 1px solid #142a42;
+            padding: 40px 30px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .profile-img-wrapper {
+            width: 270px;
+            height: 270px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 0 25px #00d2ff;
+            border: 2px solid #00d2ff;
+            margin-bottom: 30px;
+        }
+
+        .profile-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .left-box h2 {
+            color: #2bbba6;
+            font-size: 2.2rem;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+
+        .left-box p {
+            font-size: 1.1rem;
+            line-height: 1.4;
+            color: #e2e8f0;
+            margin-bottom: 35px;
+            max-width: 320px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .btn-blue {
+            background-color: #00a8ec;
+            color: #ffffff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex: 1;
+            max-width: 150px;
+            min-height: 50px;
+            line-height: 1.2;
+            transition: background-color 0.2s;
+        }
+
+        .btn-blue:hover {
+            background-color: #0092cd;
+        }
+
+        
+        .right-box {
+            border: 1px solid #142a42;
+            padding: 40px 35px;
+            flex: 1.2;
+        }
+
+        .right-box h1 {
+            color: #2bbba6;
+            font-size: 2.8rem;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        .right-box h3 {
+            color: #2bbba6;
+            font-size: 1.5rem;
+            font-weight: normal;
+            margin-bottom: 25px;
+        }
+
+        .right-box p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #ffffff;
+        }
+
+        
+        @media (max-width:786px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .about-container {
+                flex-direction: column-reverse;
+                padding: 20px 5%;
+            }
+
+            .left-box, .right-box {
+                width: 100%;
+            }
+
+            .profile-img-wrapper {
+                width: 220px;
+                height: 220px;
+            }
+
+            .right-box h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+   <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Georgia, serif;
+        }
+
+        body {
+            background-color: #071527;
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        
+        header {
+            width: 100%;
+            padding: 25px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            color: #2bbba6;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 45px;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover {
+            color: #2bbba6;
+        }
+
+        
+        .about-container {
+            padding: 40px 8%;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 50px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+    
+        .left-box {
+            border: 1px solid #142a42;
+            padding: 40px 30px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .profile-img-wrapper {
+            width: 270px;
+            height: 270px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 0 25px #00d2ff;
+            border: 2px solid #00d2ff;
+            margin-bottom: 30px;
+        }
+
+        .profile-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .left-box h2 {
+            color: #2bbba6;
+            font-size: 2.2rem;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+
+        .left-box p {
+            font-size: 1.1rem;
+            line-height: 1.4;
+            color: #e2e8f0;
+            margin-bottom: 35px;
+            max-width: 320px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .btn-blue {
+            background-color: #00a8ec;
+            color: #ffffff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex: 1;
+            max-width: 150px;
+            min-height: 50px;
+            line-height: 1.2;
+            transition: background-color 0.2s;
+        }
+
+        .btn-blue:hover {
+            background-color: #0081b8;
+            box-shadow: 0 0 15px rgba(0, 168, 236, 0.6);
+            transform: translateY(-3px);
+        }
+
+        
+        .right-box {
+            border: 1px solid #142a42;
+            padding: 40px 35px;
+            flex: 1.2;
+        }
+
+        .right-box h1 {
+            color: #2bbba6;
+            font-size: 2.8rem;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        .right-box h3 {
+            color: #2bbba6;
+            font-size: 1.5rem;
+            font-weight: normal;
+            margin-bottom: 25px;
+        }
+
+        .right-box p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #ffffff;
+        }
+
+    
+        @media screen and (max-width:768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px 5%;
+            }
+
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .about-container {
+                flex-direction: column-reverse; 
+                padding: 20px 4%;
+                gap: 25px;
+            }
+
+            .left-box, .right-box {
+                width: 100%;
+                padding: 25px 15px;
+            }
+
+            .profile-img-wrapper {
+                width: 180px;
+                height: 180px;
+                margin-bottom: 20px;
+            }
+
+            .right-box h1 {
+                font-size: 2rem;
+            }
+
+            .right-box h3 {
+                font-size: 1.1rem;
+            }
+
+            .right-box p {
+                font-size: 0.95rem;
+            }
+
+            .left-box h2 {
+                font-size: 1.7rem;
+            }
+
+            .btn-blue {
+                max-width: 130px;
+                font-size: 0.85rem;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+
+
+    <header>
+        <a href="#" class="logo">Parwinder.</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li><a href="skill.html">Skills</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="resume.html">resume</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+    </header>
+
+    <main class="about-container">
+
+        
+        <div class="left-box">
+            <div class="profile-img-wrapper">
+            
+                <img src="photo2.jpg" alt="Parwinder Kaur">
+            </div>
+            <h2>Parwinder Kaur</h2>
+            <p>I'm a passionate web developer who loves to create clean,modern and user-friendly website.</p>
+            
+            <div class="btn-group">
+                <a href="resume.pdf" class="btn-blue">Download<br>Resume</a>
+                <a href="contactus.html" class="btn-blue">Contact me</a>
+            </div>
+        </div>
+
+    
+        <div class="right-box">
+            <h1>About Me</h1>
+            <h3>"Who I AM"</h3>
+            <p>I am a passionate Web developer with Knowledge of HTML,CSS,Javascript,PHP,and MySQL.I enjoy building responsive,user-friendly, and attractive website. I am a quick learner,dedicated to improving my skills, and excited to start my career as a web developer.I am looking for an opportunity where I can contribute,learn new technologies,and grow professionally.</p>
+        </div>
+
+    </main>
+</body>
+</html

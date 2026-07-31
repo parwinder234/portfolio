@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+     <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    body {
+      background-color: #061527;
+      color: #ffffff;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    
+    header {
+      width: 100%;
+      background-color: #061527;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      max-width: 1250px;
+      margin: 0 auto;
+      padding: 18px 4%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #29b6a6;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 35px;
+    }
+
+    .nav-links a {
+      color: #d1d5db;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #29b6a6;
+    }
+
+    
+    .resume-container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    
+    .resume-card {
+      background-color: #061527;
+      border: 2px solid #00d2ff;
+      border-radius: 4px;
+      padding: 40px;
+      box-shadow: 0 0 15px rgba(0, 210, 255, 0.2);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .resume-card:hover {
+      box-shadow: 0 0 25px rgba(0, 210, 255, 0.4);
+    }
+    .profile-title {
+      font-size: 2.8rem;
+      color: #29b6a6;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .bio-text {
+      font-size: 1.25rem;
+      color: #e2e8f0;
+      margin-bottom: 25px;
+      text-align: justify;
+    }
+
+    
+    .avatar-wrapper {
+      margin-bottom: 25px;
+    }
+
+    .avatar-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #29b6a6;
+    }
+
+    .sub-role {
+      font-size: 1.2rem;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 30px;
+      font-size: 1.2rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      color: #ffffff;
+    }
+
+    .contact-item i {
+      font-size: 1.2rem;
+      color: #ffffff;
+      width: 25px;
+    }
+
+    .link-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .link-group a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .link-group a:hover {
+      color: #00d2ff;
+    }
+
+    .divider-slash {
+      color: #ffffff;
+    }
+
+    
+    .section-header {
+      font-size: 1.3rem;
+      color: #29b6a6;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background-color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    
+    .horizontal-list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .horizontal-list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 1.2rem;
+      color: #ffffff;
+    }
+
+    .horizontal-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #ffffff;
+      font-size: 1.5rem;
+      line-height: 1;
+      top: -2px;
+    }
+
+
+    .btn-container {
+      margin-top: 35px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      background-color: #00aaff;
+      color: #ffffff;
+      padding: 12px 28px;
+      font-size: 1.1rem;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background-color: #0088cc;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 170, 255, 0.4);
+    }
+
+    
+    @media (max-width: 768px) {
+    
+      nav {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px 2%;
+      }
+
+      .nav-links {
+        gap: 8px 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .nav-links a {
+        font-size: 0.95rem;
+        padding: 4px;
+      }
+
+  
+      .resume-container {
+        margin: 20px auto;
+        padding: 0 10px;
+      }
+
+      .resume-card {
+        padding: 20px 15px;
+      }
+
+      .profile-title {
+        font-size: 2.1rem;
+      }
+
+      .bio-text {
+        font-size: 1.05rem;
+      }
+
+      .contact-details {
+        font-size: 1rem;
+      }
+
+      .horizontal-list {
+        gap: 10px 15px;
+      }
+
+      .horizontal-list li {
+        font-size: 1rem;
+      }
+
+      .download-btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  
+  <header>
+    <nav>
+      <a href="#" class="logo">Parwinder.</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html" class="active">resume</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+  <div class="resume-container">
+    <div class="resume-card">
+      
+    
+      <h1 class="profile-title">Parwinder Kaur</h1>
+      
+  
+      <p class="bio-text">
+        Motivated and detail-Oriented BCA graduate with skill in HTML, CSS, Javascript, PHP, MySQL. Passionate about building responsive and user-friendly website. A quick learner with strong problem-solving ability, eager to contribute to a professional team and grow as a Front-End/Web Developer.
+      </p>
+
+    
+      <div class="avatar-wrapper">
+        <img src="photo2.jpg" alt="Parwinder Kaur" class="avatar-img">
+      </div>
+
+
+      <div class="sub-role">Front-End/Web Developer</div>
+
+  
+      <div class="contact-details">
+        <div class="contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <span>+91 6239111579</span>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-at"></i>
+          <span>parwinder0634@gmail.com</span>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-globe"></i>
+          <div class="link-group">
+            <a href="#">Portfolio</a> <span class="divider-slash">|</span>
+            <a href="#">Github</a> <span class="divider-slash">|</span>
+            <a href="#">Linkdin</a>
+          </div>
+        </div>
+      </div>
+
+  
+      <div class="section-header">CAREER OBJECTIVE</div>
+      <hr>
+      <p class="bio-text">
+        Motivated and enthusiastic web developer with skills in HTML, CSS, JavaScript, Passionate about creating responsive websites and eager to start my career.
+      </p>
+
+    
+      <div class="section-header">TECHNICIAL SKILLS</div>
+      <hr>
+      <ul class="horizontal-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>PHP</li>
+        <li>MySQL</li>
+        <li>Github</li>
+        <li>Responsive Web Design</li>
+      </ul>
+
+      
+      <div class="section-header">QUALIFICATION</div>
+      <hr>
+      <ul class="horizontal-list">
+        <li>BCA</li>
+        <li>BED</li>
+        <li>Web Designing</li>
+        <li>Ms Office</li>
+      </ul>
+
+  
+      <div class="section-header">STRENGHTS</div>
+      <hr>
+      <ul class="horizontal-list">
+        <li>Quick learner</li>
+        <li>Team Player</li>
+        <li>Problem-Solving</li>
+        <li>Good Communication</li>
+        <li>Positive attitude</li>
+      </ul>
+
+    
+      <div class="section-header">LANGUAGES</div>
+      <hr>
+      <ul class="horizontal-list">
+        <li>English</li>
+        <li>Hindi</li>
+        <li>Punjabi</li>
+      </ul>
+
+    
+      <div class="section-header">PROJECTS</div>
+      <hr>
+      <ul class="horizontal-list">
+        <li>Calculator</li>
+        <li>Institute Website</li>
+        <li>student result form</li>
+        <li>list add and delete</li>
+        <li>student form with validation</li>
+        <li>portfolio website</li>
+      </ul>
+
+
+      <div class="btn-container">
+        <a href="resume.pdf" class="download-btn">Download Resume</a>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

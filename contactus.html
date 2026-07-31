@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parwinder - Contact Us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    body {
+      background-color: #061527;
+      color: #ffffff;
+      min-height: 100vh;
+    }
+
+   
+    header {
+      width: 100%;
+      background-color: #061527;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      max-width: 1250px;
+      margin: 0 auto;
+      padding: 18px 4%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #29b6a6;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 35px;
+    }
+
+    .nav-links a {
+      color: #d1d5db;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #29b6a6;
+    }
+
+    .contact-container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 40px;
+      align-items: stretch;
+    }
+
+   
+    .contact-card {
+      background-color: #061527;
+      border: 1px solid #113054;
+      border-radius: 8px;
+      padding: 40px 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .contact-card:hover {
+      border-color: #00d2ff;
+      box-shadow: 0 0 20px rgba(0, 210, 255, 0.25);
+      transform: translateY(-4px);
+    }
+
+    .card-title {
+      width: 100%;
+      text-align: center;
+      font-size: 2.2rem;
+      color: #4292e2;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+   
+    .profile-img-box {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 35px auto;
+      border: 2px solid #29b6a6;
+    }
+
+    .profile-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    
+    .info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      width: 100%;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 1.2rem;
+      color: #ffffff;
+    }
+
+    .info-item i {
+      color: #29b6a6;
+      font-size: 1.3rem;
+      width: 25px;
+      text-align: center;
+    }
+
+    
+    .form-card {
+      background-color: #061527;
+      border: 1px solid #113054;
+      border-radius: 8px;
+      padding: 40px 35px;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .form-card:hover {
+      border-color: #00d2ff;
+      box-shadow: 0 0 20px rgba(0, 210, 255, 0.25);
+      transform: translateY(-4px);
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      margin-top: 10px;
+    }
+
+    .form-group {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .form-group.message-group {
+      align-items: flex-start;
+    }
+
+    .form-group label {
+      font-size: 1.25rem;
+      color: #ffffff;
+      text-align: right;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 18px;
+      border-radius: 10px;
+      border: 1px solid #ffffff;
+      background-color: #ffffff;
+      color: #000000;
+      font-size: 1.1rem;
+      outline: none;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: #757575;
+      font-family: monospace;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #00aaff;
+      box-shadow: 0 0 8px rgba(0, 170, 255, 0.5);
+    }
+
+    .form-group textarea {
+      height: 120px;
+      resize: vertical;
+    }
+
+    
+    .submit-btn-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .send-btn {
+      background-color: #00aaff;
+      color: #ffffff;
+      border: none;
+      padding: 12px 35px;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .send-btn:hover {
+      background-color: #0088cc;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 170, 255, 0.4);
+    }
+
+   
+    @media (max-width: 900px) {
+      .contact-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .form-group {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .form-group label {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px 2%;
+      }
+
+      .nav-links {
+        gap: 8px 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .nav-links a {
+        font-size: 0.95rem;
+        padding: 4px;
+      }
+
+      .contact-card, .form-card {
+        padding: 25px 20px;
+      }
+
+      .card-title {
+        font-size: 1.8rem;
+      }
+
+      .info-item {
+        font-size: 1rem;
+      }
+
+      .send-btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#" class="logo">Parwinder.</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">resume</a></li>
+        <li><a href="contactus.html" class="active">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="contact-container">
+
+    <div class="contact-card">
+      <h2 class="card-title">Contact Me</h2>
+      
+      <div class="profile-img-box">
+        <img src="photo2.jpg" alt="Parwinder Kaur">
+      </div>
+
+      <div class="info-list">
+        <div class="info-item">
+          <i class="fa-solid fa-address-card"></i>
+          <span>Name: Parwinder Kaur</span>
+        </div>
+        <div class="info-item">
+          <i class="fa-solid fa-crown"></i>
+          <span>Front-End/Web Developer</span>
+        </div>
+        <div class="info-item">
+          <i class="fa-solid fa-phone"></i>
+          <span>+91 6239111579</span>
+        </div>
+        <div class="info-item">
+          <i class="fa-solid fa-at"></i>
+          <span>Parwinder0634@gmail.com</span>
+        </div>
+        <div class="info-item">
+          <i class="fa-solid fa-compass"></i>
+          <span>Punjab India</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <h2 class="card-title">Get In Touch</h2>
+
+      <form class="contact-form" action="#" method="POST">
+        
+        <div class="form-group">
+          <label for="name">Names:</label>
+          <input type="text" id="name" name="name" placeholder="enter your name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="enter your email" required>
+        </div>
+
+        <div class="form-group message-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" placeholder="enter message" required></textarea>
+        </div>
+
+        <div class="submit-btn-container">
+          <button type="submit" class="send-btn">Send Message</button>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+
+</body>
+</html>

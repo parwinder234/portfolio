@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+        body{
+               margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+        }
+       .heading{
+        background-color: #E65100;
+        height:100px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+       color: white;
+       flex-direction: column;
+
+      }
+      .title-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .title-box i {
+            font-size: 24px; 
+
+        }
+        .heading h2, .heading h4 {
+            margin: 0;
+        }
+      
+        .container{
+            height:auto;
+            width:100%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            gap:30px;
+            overflow: hidden;
+            padding-top: 40px;
+        }
+        .main {
+            height: auto;
+            width:300px;
+            border: 2px solid gainsboro;
+            text-align: center;
+            border-radius: 10px;
+            transition: transform 0.3s;
+       padding-bottom: 15px;
+       overflow: hidden;
+        }
+        .main img{
+            display: block;
+                    width: 100%;
+    height:240px;
+    object-fit: contain;
+    background-color: #f8f8f8;
+    padding: 5px; 
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    object-position: center;
+}
+    
+        .main p{
+           color:#E65100;
+           font-weight: bold;
+        }
+        .main button{
+                  color:white;
+                  background-color:#E65100;
+                  height: 30px;
+                  width:250px;
+                  font-weight: bold;
+                  border: none;
+            border-radius: 5px;
+            cursor: pointer;
+                 
+        }
+        .main:hover{
+            transform:translateY(-20px);
+           
+        }
+    </style>
+</head>
+<body>
+   <div class="heading">
+        <div class="title-box">
+            <i class="fa-solid fa-utensils"></i>
+            <h2>Food Junction</h2>
+        </div>
+        <h4>Delicious Food, Happy Mood</h4>
+    </div>
+    
+    <div class="container">
+        <div class="main">
+            <img src="piza.jpg" alt="pizza">
+            <h3>Cheese pizza</h3>
+            <p>&#8377;299</p>
+            <button>Order Now</button>
+
+        </div>
+        <div class="main">
+            <img src="veg.jpg" alt="veg burgger">
+            <h3>Veg Burgger</h3>
+            <p>&#8377;149</p>
+            <button>Order Now</button>
+
+        </div>
+        <div class="main">
+            <img src="white.jpg" alt="pizza">
+            <h3>White Sauce Pasta</h3>
+            <p>&#8377;249</p>
+            <button>Order Now</button>
+
+        </div>
+        <div class="main">
+            <img src="french.jpg" alt="pizza">
+            <h3>French Fries</h3>
+            <p>&#8377;199</p>
+            <button>Order Now</button>
+
+        </div>
+        <div class="main">
+            <img src="man.jpg" alt="pizza">
+            <h3>Veg Manchurian</h3>
+            <p>&#8377;150</p>
+            <button>Order Now</button>
+
+        </div>
+        <div class="main">
+            <img src="macroni.jpg" alt="pizza">
+            <h3>Macaroni Cheese</h3>
+            <p>&#8377;198</p>
+            <button>Order Now</button>
+
+        </div>
+        <div class="main">
+            <img src="cofee.jpg" alt="pizza">
+            <h3>Cold Coffee</h3>
+            <p>&#8377;120</p>
+            <button>Order Now</button>
+
+        </div>
+        <div class="main">
+            <img src="orange.jpg" alt="pizza">
+            <h3>Orange Juice</h3>
+            <p>&#8377;90</p>
+            <button>Order Now</button>
+
+        </div>
+       
+        
+        
+    </div>
+</body>
+</html>

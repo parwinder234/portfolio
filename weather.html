@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   body { 
+      font-family: Arial, sans-serif; 
+      text-align: center; 
+     
+      background-color: #e3f2fd; 
+      transition: background-color 0.5s ease; 
+      overflow: hidden;
+      
+      
+    }
+    .card { 
+      background: white; 
+      align-items: center;
+      padding: 30px; 
+      display: inline-block; 
+      border-radius: 12px; 
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+      width: 280px; 
+    margin-top: 50px;
+    }
+    .btn-group { 
+      margin-top: 15px; 
+      display: flex; 
+      flex-direction: column; 
+      gap: 8px; 
+    }
+    button { 
+      padding: 10px; 
+      cursor: pointer; 
+      border: none; 
+      background-color: #333; 
+      color: white; 
+      border-radius: 6px; 
+      font-weight: bold; 
+    }
+    button:hover { 
+      opacity: 0.8; 
+    }
+    @media(max-width:768px)
+    
+    {
+      body { 
+      font-family: Arial, sans-serif; 
+      text-align: center; 
+     
+      background-color: #e3f2fd; 
+      transition: background-color 0.5s ease; 
+      overflow: hidden;
+      
+      
+    }
+      .card { 
+      background: white; 
+      padding:20px; 
+      display: inline-block; 
+      border-radius: 12px; 
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+      width:200px;
+      overflow: hidden; 
+    }
+    .btn-group { 
+      margin-top: 15px; 
+      display: flex; 
+      flex-direction: column; 
+    gap:4px; 
+    }
+    }
+  </style>
+<body>
+    <div class="card">
+    <h2 id="city">City: punjab</h2>
+    <h1 id="temp">25°C</h1>
+    <p id="weather">Sunny ☀️</p>
+
+   <div class="btn-group">
+    <button onclick="showgurugram()">Gurugram</button>
+    <button onclick="showmumbai()">Mumbai</button>
+    <button onclick="showDelhi() ">Delhi</button>
+  </div>
+    </div>
+  <script>
+   function showgurugram() {
+      document.getElementById("city").innerText = "City: Gurugram";
+      document.getElementById("temp").innerText = "32°C";
+      document.getElementById("weather").innerText = "Hot & Humid 🌊";
+      document.body.style.backgroundColor = "#fff3cd";
+    }
+
+    function showmumbai() {
+      document.getElementById("city").innerText = "City: Mumbai";
+      document.getElementById("temp").innerText = "18°C";
+      document.getElementById("weather").innerText = "Rainy 🌧️";
+      document.body.style.backgroundColor = "#cce5ff";
+
+    }
+    function showDelhi() {
+      document.getElementById("city").innerText = "City: Delhi";
+      document.getElementById("temp").innerText = "28°C";
+      document.getElementById("weather").innerText = "Hazy 🌫️";
+      document.body.style.backgroundColor = "#e2e3e5"; 
+    }
+  </script>
+</body>
+
+</html>

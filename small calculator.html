@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+    }
+   body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .main {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+           min-height:300px ;
+            width: 300px;
+            border:2px solid ghostwhite;
+            border-radius: 10px;
+            padding: 20px;
+            margin: auto;
+        }
+        input {
+            padding: 8px;
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+        .btn1{
+            color:black;
+            background-color:gray;
+            cursor: pointer;
+        }
+        .btn1:hover{
+            color:black;
+            background-color:rgb(63, 50, 50);
+        }
+        @media(max-width:768px){
+            *{
+                font-size:25px;
+                overflow: hidden;
+                text-align: center;
+                
+            }
+             .main {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+           min-height:250px ;
+            width:250px;
+            border:2px solid ghostwhite;
+            border-radius: 10px;
+            padding: 15px;
+            margin: auto;
+            overflow: hidden;
+        }
+         input {
+            padding:4px;
+            margin-bottom:5px;
+            cursor: pointer;
+        }
+        }
+</style>
+<body>
+    <div class="main">
+        <label for="value1">value1:</label>
+<input type="text" placeholder="0" required id="value1">
+<label for="value2">value2:</label>
+<input type="text" placeholder="0" required id="value2">
+<label for="result">result:</label>
+<input type="text" placeholder="0" required id="result">
+<button onclick="calculate('+')" class="btn1 btn2">Add</button>
+        <button onclick="calculate('-')" class="btn1 btn3">Sub</button>
+        <button onclick="calculate('*')" class="btn1 btn4">Mul</button>
+        <button onclick="calculate('/')" class="btn1 btn5">Div</button>
+        <button onclick="calculate('%')" class="btn1 btn6">%</button>
+        <button onclick="clearAll()" class="btn1 btn7">del (Clear)</button>
+        <button onclick="backspace()" class="btn1 btn8">back</button>
+
+    </div>
+    <script>
+       function calculate(operation) {
+            const v1 = parseFloat(document.getElementById('value1').value) || 0;
+            const v2 = parseFloat(document.getElementById('value2').value) || 0;
+            const resultInput = document.getElementById('result');
+
+            let res = 0;
+
+            switch(operation) {
+                case '+':
+                    res = v1 + v2;
+                    break;
+                case '-':
+                    res = v1 - v2;
+                    break;
+                case '*':
+                    res = v1 * v2;
+                    break;
+                case '/':
+                    res = v2 !== 0 ? v1 / v2 : 'Cannot divide by 0';
+                    break;
+                case '%':
+                    res = v1 % v2;
+                    break;
+            }
+
+            resultInput.value = res;
+        }
+function clearAll() {
+            document.getElementById('value1').value = '';
+            document.getElementById('value2').value = '';
+            document.getElementById('result').value = '';
+        }
+        function backspace() {
+
+           
+            const resultInput = document.getElementById('result');
+            resultInput.value = resultInput.value.slice(0, -1);
+        }
+
+
+    </script>
+</body>
+</html>

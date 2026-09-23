@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+            display: flex;
+            justify-content: center; 
+            align-items: center;     
+            min-height: 100vh;    
+            overflow: hidden;  
+        }
+    .container {
+    display: flex;
+    flex-direction:column; 
+    align-items: center;
+    gap: 20px; 
+    padding: 20px;
+    margin: 50px auto;
+}
+   .container > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    border-radius: 30px;
+}
+.btn{
+    background-color:gainsboro;
+    cursor: pointer;
+    width:50px;
+    border-radius: 5px;
+}
+      .btn:hover{
+        background-color: gray;
+      } 
+</style>
+<body>
+    <div class="container">
+   <div class="div1">
+     this is div one 
+     this div have a yellow color
+     this have a green background
+     <button  class="btn" id="btn1">Div1</button>
+   </div> 
+   <div class="div2">
+       this is div second
+     this div have a blue color
+     this have a orange background
+        <button  class="btn" id="btn2">Div2</button>
+   </div>
+</div>
+<script>
+       
+        const div1 = document.querySelector('.div1');
+        const div2 = document.querySelector('.div2');
+        const btn1 = document.getElementById('btn1');
+        const btn2 = document.getElementById('btn2');
+
+        btn1.addEventListener('click', () => {
+            div1.style.backgroundColor = 'green';
+            div1.style.color = 'yellow';
+        });
+
+     
+        btn2.addEventListener('click', () => {
+            div2.style.backgroundColor = 'orange';
+            div2.style.color = 'blue';
+        });
+    </script>
+</body>
+</html>
